@@ -25,4 +25,4 @@ def home():
         her_name=her_name
     )
 
-app.run()
+app.run(host="0.0.0.0", port=10000)
