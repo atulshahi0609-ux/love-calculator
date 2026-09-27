@@ -18,13 +18,13 @@ def home():
         her_name = request.form["her_name"]
 
         # Random Love Percentage
-        love = random.randint(1, 100)
+        love = random.randint(33, 100)
 
         # Love Percentage ke hisaab se message
-        if love <= 30:
+        if love <= 50:
             message = "Thoda aur effort karo! 😄❤️"
 
-        elif love <= 60:
+        elif love <= 70:
             message = "Cute connection hai! 💕"
 
         elif love <= 80:
