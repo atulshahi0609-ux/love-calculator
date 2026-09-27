@@ -10,8 +10,10 @@ def home():
     her_name = ""
 
     if request.method == "POST":
-        your_name = request.form["your_name"]
-        her_name = request.form["her_name"]
+        
+        print("Your Name:", your_name, flush=True)
+        print("Her Name:", her_name, flush=True)
+        
 
         love = random.randint(33, 100)
 
