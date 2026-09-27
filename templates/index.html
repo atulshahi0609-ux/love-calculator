@@ -22,6 +22,7 @@
         }
 
         /* Background hearts */
+
         .heart {
             position: absolute;
             color: rgba(255, 255, 255, 0.5);
@@ -62,6 +63,7 @@
         }
 
         /* Main card */
+
         .card {
             width: 380px;
             padding: 35px;
@@ -141,6 +143,7 @@
         }
 
         /* Result */
+
         .result {
             margin-top: 30px;
             padding: 20px;
@@ -167,6 +170,42 @@
             font-size: 28px;
             font-weight: bold;
         }
+
+        /* Built by */
+
+        .built-by {
+            margin-top: 25px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* 🌹 Rose falling animation */
+
+        .rose {
+            position: fixed;
+            top: -50px;
+            font-size: 30px;
+
+            animation: roseFall 5s linear forwards;
+
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        @keyframes roseFall {
+            0% {
+                top: -50px;
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                top: 110vh;
+                transform: rotate(360deg);
+                opacity: 0;
+            }
+        }
+
     </style>
 
 </head>
@@ -190,10 +229,22 @@
         <form method="POST">
 
             <label>Your Name</label>
-            <input type="text" name="your_name" placeholder="Enter your name" required>
+
+            <input
+                type="text"
+                name="your_name"
+                placeholder="Enter your name"
+                required
+            >
 
             <label>Her Name</label>
-            <input type="text" name="her_name" placeholder="Enter her name" required>
+
+            <input
+                type="text"
+                name="her_name"
+                placeholder="Enter her name"
+                required
+            >
 
             <button type="submit">
                 Check Love ❤️
@@ -216,7 +267,39 @@
 
         </div>
 
+
+        <!-- 🌹 Roses -->
+
+        <script>
+
+            for (let i = 0; i < 30; i++) {
+
+                let rose = document.createElement("div");
+
+                rose.className = "rose";
+
+                rose.innerHTML = "🌹";
+
+                rose.style.left = Math.random() * 100 + "vw";
+
+                rose.style.animationDelay =
+                    Math.random() * 3 + "s";
+
+                rose.style.fontSize =
+                    (20 + Math.random() * 25) + "px";
+
+                document.body.appendChild(rose);
+
+            }
+
+        </script>
+
         {% endif %}
+
+
+        <p class="built-by">
+            Built by Atul Shahi ❤️
+        </p>
 
     </div>
 
