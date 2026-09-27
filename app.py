@@ -15,8 +15,9 @@ def home():
 
         love = random.randint(33, 100)
 
-        print("Your Name:", your_name)
-        print("Her Name:", her_name)
+        print("Your Name:", your_name, flush=True)
+        print("Her Name:", her_name, flush=True)
+        
 
     return render_template(
         "index.html",
